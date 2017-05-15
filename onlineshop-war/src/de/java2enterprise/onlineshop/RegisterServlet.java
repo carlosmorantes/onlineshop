@@ -7,6 +7,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -40,8 +41,14 @@ public class RegisterServlet extends HttpServlet {
 		customer.setPassword(password);
 		
 		//save session customer
-		final HttpSession session = req.getSession();
-		session.setAttribute("customer", customer);
+		//final HttpSession session = req.getSession();
+		//session.setAttribute("customer", customer);
+		
+		//add cookies
+		final Cookie customerEmail = new Cookie("email", email);
+		resp.addCookie(customerEmail);
+		final Cookie customerPassword = new Cookie("password", password);
+		resp.addCookie(customerPassword);
 		
 		//after register redirect to index.html
 		final RequestDispatcher dispatcher = req.getRequestDispatcher("index.html");
