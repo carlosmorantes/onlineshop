@@ -11,9 +11,9 @@
 			<h1 class="title">Onlineshop</h1>
 		</hgroup>
 		<nav>
-			<a href="index.html">Home</a> <a href="register.html">Registrieren</a>
-			<a href="signin.html">Einloggen</a> <a href="sell.html">Verkaufen</a>
-			<a href="search.html">Suchen</a>
+			<a href="index.jsp">Home</a> <a href="register.jsp">Registrieren</a>
+			<a href="signin.jsp">Einloggen</a> <a href="sell.jsp">Verkaufen</a>
+			<a href="search.jsp">Suchen</a>
 		</nav>
 	</header>
 	<article>
