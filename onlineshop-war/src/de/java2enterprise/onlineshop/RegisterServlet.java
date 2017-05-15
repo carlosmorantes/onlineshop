@@ -39,11 +39,13 @@ public class RegisterServlet extends HttpServlet {
 		customer.setEmail(email);
 		customer.setPassword(password);
 		
+		//save session customer
 		final HttpSession session = req.getSession();
 		session.setAttribute("customer", customer);
 		
+		//after register redirect to index.html
 		final RequestDispatcher dispatcher = req.getRequestDispatcher("index.html");
-		dispatcher.forward(req, resp);
+		dispatcher.forward(req, resp);		
 		
 		/*final PrintWriter out = resp.getWriter();
 		
