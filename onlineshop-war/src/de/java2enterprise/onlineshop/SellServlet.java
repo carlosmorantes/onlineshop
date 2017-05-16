@@ -36,6 +36,7 @@ public class SellServlet extends HttpServlet {
 		InputStream is = null;
 
 		try {
+			//path to save the picture
 			String path = "/tmp/"
 					+ part.getSubmittedFileName();
 			File file = new File(path);
