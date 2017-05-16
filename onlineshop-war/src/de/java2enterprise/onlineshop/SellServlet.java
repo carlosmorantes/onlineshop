@@ -28,34 +28,9 @@ import javax.servlet.http.Part;
 		maxRequestSize=1024*1024*30)
 public class SellServlet extends HttpServlet {
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-		final String title = req.getParameter("title");
-		final String description = req.getParameter("description");
-		final String price = req.getParameter("price");
-
-		final Part part = req.getPart("foto");
-		
-		InputStream is = part.getInputStream();
-		
-		String path = part.getSubmittedFileName();
-		File file = new File(path);
-		OutputStream os = new FileOutputStream(file);
-		
-		final PrintWriter out = resp.getWriter();
-
-		out.println("<!DOCTYPE HTML>");
-		out.println("<br>Artikel: " +title);
-		out.println("<br>Beschribeung: "+description);
-		out.println("<br>Preis: " +price);
-		out.println("<br>Ihr Bild wird hier hochgeladen: " +file.getAbsolutePath());
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {	
 		
 		final AsyncContext ac = req.startAsync();
-		ac.start(new FotoService(is, os));
-		ac.complete();
-		
-		
-
-		
+		ac.start(new FotoService(ac));		
 	}
 }
