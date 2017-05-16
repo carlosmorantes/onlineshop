@@ -51,7 +51,7 @@ public class SellServlet extends HttpServlet {
 		out.println("<br>Ihr Bild wird hier hochgeladen: " +file.getAbsolutePath());
 		
 		final AsyncContext ac = req.startAsync();
-		//ac.start(new FotoService(is, os));
+		ac.start(new FotoService(is, os));
 		ac.complete();
 		
 		
