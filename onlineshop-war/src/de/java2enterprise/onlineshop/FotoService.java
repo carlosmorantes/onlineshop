@@ -1,4 +1,5 @@
 package de.java2enterprise.onlineshop;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -26,8 +27,7 @@ public class FotoService implements Runnable {
 		
 		try {
 			final Part part = request.getPart("foto");
-			os = new FileOutputStream(
-					part.getSubmittedFileName());
+			os = new FileOutputStream(part.getSubmittedFileName());
 			is = part.getInputStream();
 			out = response.getWriter();
 			byte[] b = new byte[1024];
