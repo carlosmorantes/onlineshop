@@ -14,6 +14,7 @@
 			<a href="index.jsp">Home</a> <a href="register.jsp">Registrieren</a>
 			<a href="signin.jsp">Einloggen</a> <a href="sell.jsp">Verkaufen</a>
 			<a href="search.jsp">Suchen</a>
+			<a href="example.jsp">Example</a>
 		</nav>
 	</header>
 	<form action="sell" method="post" enctype="multipart/form-data">

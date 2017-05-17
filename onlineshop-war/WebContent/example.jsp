@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -19,6 +20,10 @@
 				<a href="example.jsp">Example</a>
 			</nav>
 		</header>
+		
+		<form method="get" action="example">
+		<input type="submit">
+		</form>
 		
 		<footer>
 			Copyright
