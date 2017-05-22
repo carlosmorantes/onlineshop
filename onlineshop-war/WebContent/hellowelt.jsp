@@ -12,11 +12,17 @@
 	<br>
 
 	<a href="hellowelt.jsp?locale=de_DE">German</a>
-	<a href="hellowelt.jsp?locale=en_US">English</a> 
+	<a href="hellowelt.jsp?locale=en_US">English</a>
+	<br> Messages:
 	<br>
-	
-	Message:
 	<fmt:message key="hello.world"></fmt:message>
+	<br>
+	<fmt:message key="your.email.password">
+		<fmt:param value="${customer.email}"></fmt:param>
+		<fmt:param value="${customer.password}"></fmt:param>
+	</fmt:message>
+
+
 
 
 
