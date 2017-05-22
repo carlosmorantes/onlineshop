@@ -33,13 +33,13 @@ public class SigninServlet extends HttpServlet {
 		String email = req.getParameter("email");
 		String password = req.getParameter("password");
 
-		/*final HttpSession session = req.getSession();
+		final HttpSession session = req.getSession();
 		final Customer customer = (Customer) session.getAttribute("customer");		
 		final String customerEmail = customer.getEmail();
 		final String customerPassword = customer.getPassword();
-		 */
+		 
 
-		String cookieEmail = null;
+		/*String cookieEmail = null;
 		String cookiePassword = null;
 
 		ServletOutputStream out = resp.getOutputStream();		
@@ -78,17 +78,18 @@ public class SigninServlet extends HttpServlet {
 					"<h1>Benutzer ist nicht valide!</h1>");
 		}
 		out.println("</body>");
-		out.println("</html>");
+		out.println("</html>");*/
 
+		PrintWriter out = resp.getWriter();	
 
-		/*if(email.equals(customerEmail) && password.equals(customerPassword))
+		if(email.equals(customerEmail) && password.equals(customerPassword))
 			out.println("Benutzer ist valide!");
 		else
 			out.println("Benutzer ist nicht valide");
 
 		out.println("</body>");
 		out.println("</html>");
-		 */		
+		 	
 
 
 	}
