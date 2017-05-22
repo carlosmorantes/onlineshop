@@ -3,7 +3,18 @@
 <!DOCTYPE html>
 <html>
 <body>
-	<fmt:setBundle basename="messages" />
-	<fmt:message key="hello.world" />
+	<p>
+		<fmt:setLocale value="de_DE" />
+		<fmt:bundle basename="messages">
+			<fmt:message key="hello.world"></fmt:message>
+		</fmt:bundle>
+	</p>
+	<p>
+		<fmt:setLocale value="en_US" />
+		<fmt:bundle basename="messages">
+			<fmt:message key="hello.world"></fmt:message>
+		</fmt:bundle>
+	</p>
+	
 </body>
 </html>
