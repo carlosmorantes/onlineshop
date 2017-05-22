@@ -10,3 +10,5 @@ test.add(test3);
 session.setAttribute("test", test);
 %>
 ${test.size()}
+<%-- concatenate with += --%>
+${(a=12+3); 'a=' += a}
