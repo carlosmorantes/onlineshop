@@ -41,17 +41,17 @@ public class RegisterServlet extends HttpServlet {
 		customer.setPassword(password);
 		
 		//save session customer
-		//final HttpSession session = req.getSession();
-		//session.setAttribute("customer", customer);
+		final HttpSession session = req.getSession();
+		session.setAttribute("customer", customer);
 		
 		//add cookies
-		final Cookie customerEmail = new Cookie("email", email);
-		resp.addCookie(customerEmail);
-		final Cookie customerPassword = new Cookie("password", password);
-		resp.addCookie(customerPassword);
+		//final Cookie customerEmail = new Cookie("email", email);
+		//resp.addCookie(customerEmail);
+		//final Cookie customerPassword = new Cookie("password", password);
+		//resp.addCookie(customerPassword);
 		
 		//after register redirect to index.html
-		final RequestDispatcher dispatcher = req.getRequestDispatcher("index.html");
+		final RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
 		dispatcher.forward(req, resp);		
 		
 		/*final PrintWriter out = resp.getWriter();
